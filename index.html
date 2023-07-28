@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fresh Fruit</title>
+    <link rel="icon" href="./Assets/images/logo.png"/>
     <!-- tailwind and daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,37 +31,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <div class="navbar bg-base-100 rounded-box">
-            <div class="flex-1">
-            <a class="btn btn-ghost normal-case font-lato text-xl">Fresh Fruit</a>
-            </div>
-            <div class="flex-none gap-2">
-                <div class="form-control">
-                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-                </div>
-                <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                    <div class="w-10 rounded-full">
-                    <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                    </div>
-                </label>
-                <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                    <li>
-                    <a class="justify-between">
-                        Profile
-                        <span class="badge">New</span>
-                    </a>
-                    </li>
-                    <li><a>Settings</a></li>
-                    <li><a>Logout</a></li>
+    <nav class="flex justify-center mt-10">
+        <div class="navbar bg-c-100 rounded-full bg-red-500 font-lato h-24 justify-around w-9/12">
+            <!-- nav menu -->
+            <div class="hidden sm:flex gap-2 font-lato text-sm font-medium">
+                <ul tabindex="0" class="flex p-2 gap-4 text-white">
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
                 </ul>
-                </div>
+            </div>
+            <!-- nav logo -->
+            <div class="flex">
+                <a class="btn btn-ghost normal-case font-lato text-xl text-white">
+                    <img src="./Assets/images/logo.png" class="rounded-full w-10" />
+                    Fresh Fruit
+                </a>
+            </div>            
+            <!-- nav Search box  -->
+            <div class="form-control rounded-full">
+                <input type="text" placeholder="Search here" class="input input-bordered md:w-auto rounded-full placeholder:font-normal" />
             </div>
         </div>
     </nav>
     <main>
-        <h1>Hello</h1>
+        <!-- Hero banner section  -->
+        <div class="banner flex justify-center h-screen">
+            <!-- Hero section  -->
+            <div class="hero mt-10 rounded-lg w-9/12 h-3/5 min-h-min" style="background-image: url('/Assets/images/banner1.png');">
+                <!-- -----overlay------ -->
+                <div class="hero-overlay bg-opacity-60 rounded-lg"></div>
+                <!-- ---center text parent section--- -->
+                <div class="hero-content text-center text-neutral-content">
+                    <!-- -----center text child section----- -->
+                    <div class="max-w-lg">
+                        <h1 class="mb-5 text-5xl font-bold font-extrabold">Exotic tastes at your doorstep</h1>
+                        <p class="mb-5">We supply highly quality organic products</p>
+                        <button class="btn bg-red-500 text-white border-none">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
 </body>
